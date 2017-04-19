@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col-lg-4">
+      <div class="panel panel-default">
+        <div class="panel-body">              
+          <a [routerLink]="['']">Home</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="panel panel-default">
+        <div class="panel-body">              
+          <a [routerLink]="['/second', {outlets: {firstchild: ['firstchildcomp'], secondchild: ['secondchildcomp']}}]">first and second</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <a [routerLink]="['/second', {outlets: {firstchild: ['thirdchildcomp'], secondchild: ['fourthchildcomp']}}]">third and fourth</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="panel panel-default">
+        <div class="panel-body">              
+          <a [routerLink]="['/second', {outlets: {firstchild: ['firstchildcomp'], secondchild: ['thirdchildcomp']}}]">first and third</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <a [routerLink]="['/second', {outlets: {firstchild: ['secondchildcomp'], secondchild: ['fourthchildcomp']}}]">second and fourth</a>
+        </div>
+      </div>
+    </div>
+  </div>       
+</div>
+
+<router-outlet></router-outlet>
